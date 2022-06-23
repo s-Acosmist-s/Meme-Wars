@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>✨ ROUND 1 ✨</title>
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    function myFunction()
+    {
+        let score = 0;
+        if(document.getElementById('a').checked)
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Deewane Huye Pagal");    
+          sessionStorage.setItem("SCORE", score);
+          window.open("2.html","_self");
+        }   
+        else if(document.getElementById('b').checked)
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Deewane Huye Pagal");   
+          sessionStorage.setItem("SCORE", score);
+          window.open("2.html","_self");
+        }   
+        else if(document.getElementById('c').checked) 
+        {   
+          alert("🎊 Congratulation!You're correct 🎊"); 
+          score+=1; 
+          sessionStorage.setItem("SCORE", score);
+          window.open("2.html","_self");
+        }   
+        else if(document.getElementById('d').checked) 
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Deewane Huye Pagal");      
+          sessionStorage.setItem("SCORE", score);
+          window.open("2.html","_self");
+        }  
+        else 
+        {   
+            document.getElementById("error").innerHTML   
+                = "You have not selected any option";   
+        }   
+      }  
+  </script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <form class="login" name="myForm" metho="POST">
+  <br>
+  <div align="center">
+    <video width="500" height="170" autoplay loop>
+     <source src="1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h3 align="center">From which movie is this meme taken from?</h3>
+  <div class="radiogroup">
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="a" value="a">
+      <label class="label" for="a">
+        <div class="indicator"></div>
+        <span class="text">Chup Chup Ke  </span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="b" value="b">
+      <label class="label" for="b">
+        <div class="indicator"></div>
+        <span class="text">De Dana Dan</span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="c" value="c">
+      <label class="label" for="c">
+        <div class="indicator"></div>
+        <span class="text">Deewane Huye Pagal</span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="d" value="d">
+      <label class="label" for="d">
+        <div class="indicator"></div>
+        <span class="text">Hungama</span>
+      </label>
+    </div>
+  </div>
+  <button type="button" onclick="myFunction()">NEXT</button>
+</form>
+</body>
+</html>

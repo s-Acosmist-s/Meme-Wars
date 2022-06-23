@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+  <title>✨ ROUND 3 ✨</title>
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+  <script>
+    function myFunction()
+    {
+        let score = sessionStorage.getItem("SCORE");
+        if(document.getElementById('a').checked) 
+        {   
+          alert("🎊 Congratulation!You're correct 🎊");  
+          score+=1;
+          sessionStorage.setItem("SCORE", score);
+          window.open("4.html","_self");
+        }   
+        else if(document.getElementById('b').checked)
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Ahmad Shah"); 
+          sessionStorage.setItem("SCORE", score);
+          window.open("4.html","_self");
+        }   
+        else if(document.getElementById('c').checked) 
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Ahmad Shah"); 
+          sessionStorage.setItem("SCORE", score);
+          window.open("4.html","_self");  
+        }
+        else if(document.getElementById('d').checked)
+        {   
+          alert("Incorrect Option 😫 \nCorrect option is Ahmad Shah");  
+          sessionStorage.setItem("SCORE", score);
+          window.open("4.html","_self");
+        }    
+        else 
+        {   
+            document.getElementById("error").innerHTML   
+                = "You have not selected any option";   
+        }   
+      }  
+  </script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <form class="login" name="myForm" metho="POST">
+  <br>
+  <div align="center">
+    <video width="500" height="170" autoplay loop>
+     <source src="3.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h3 align="center">What is the name of the boy in this meme?</h3>
+  <div class="radiogroup">
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="a" value="a">
+      <label class="label" for="a">
+        <div class="indicator"></div>
+        <span class="text">Ahmad Shah</span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="b" value="b">
+      <label class="label" for="b">
+        <div class="indicator"></div>
+        <span class="text">Afzal Khan</span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="c" value="c">
+      <label class="label" for="c">
+        <div class="indicator"></div>
+        <span class="text">Md. Rizwan</span>
+      </label>
+    </div>
+    <div class="wrapper">
+      <input class="state" type="radio" name="app" id="d" value="d">
+      <label class="label" for="d">
+        <div class="indicator"></div>
+        <span class="text">Khurram Shah</span>
+      </label>
+    </div>
+  </div>
+  <button type="button" onclick="myFunction()">NEXT</button>
+</form>
+</body>
+</html>

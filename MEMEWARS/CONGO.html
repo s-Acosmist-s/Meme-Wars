@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>🎯 SCORECARD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style5.css">
+  <script>
+  let count=0;
+  function myFunction()
+   {
+	  let score = sessionStorage.getItem("SCORE");
+	  for( let i = 0 ;i < score.length ;i++)
+	  {
+		if( score[i] == "1")
+		{
+		  count++;
+		}
+	  }
+	  document.getElementById("myText").innerHTML = count;
+	}
+	function my()
+	{
+		window.open("1.html","_self");
+	}
+</script>
+</head>
+<body onload="myFunction()" style="background-image: url(img3.jpg);">
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+	<div class="container">
+		<h1 style="font-family: 'Rubik Moonrocks', cursive;font-size:50px;">🎆 Congratulations 🎆</h1>
+		<br>
+		<br>
+		<h3 style="font-size:30px;">SCORE : <span id="myText"></span> / 7</h3>
+		<br>
+		<br>
+		<form class="form" method="post">
+			<button type="button" onclick="my()" id="login-button">PLAY AGAIN</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+</body>
+</html>
